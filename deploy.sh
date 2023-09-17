@@ -5,8 +5,7 @@ then
   echo "Docker Exists"
 else
   echo "No Docker Container Runnig on that name"
-pwd 
- docker build -t munish/jenkins-learn .
-  docker run -dp 3500:3500 munish/jenkins-learn
-  docker ps
+   docker build -t munish/jenkins-learn .
+    docker run -dp 3500:3500 munish/jenkins-learn
+    docker ps
 fi
