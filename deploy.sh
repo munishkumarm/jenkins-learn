@@ -1,5 +1,6 @@
 #!/bin/sh
 DE=$(docker ps | grep "jenkinslearndocker1" -c)
+CD=$(date '+%Y-%m-%d %H:%M:%S')
 #echo $DE
 if [ $DE > 0 ];
 then
@@ -7,6 +8,9 @@ then
   echo "STOPPING RUNNING CONTAINER"
   docker stop jenkinslearndocker1
   echo "CONTAINER STOPPED"
+  echo "RENAMING CONTAINER"
+  docker rename jenkinslearndocker1 'jenkinslearndocker1$CD'
+  echo "CONTAINER NAME CHANGED"
   echo "UPDATING IMAGE WITH LATEST CHANGES"
   docker build -t munish/jenkins-learn .
   echo "CHNAGES UPDATED"
