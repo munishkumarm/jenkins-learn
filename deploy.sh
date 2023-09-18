@@ -1,6 +1,6 @@
 #!/bin/sh
 DE=$(docker ps | grep "jenkinslearndocker1" -c)
-CD=$(date '+%Y-%m-%d %H:%M:%S')
+CD=$(date '+%Y_%m_%d_%H_%M_%S')
 #echo $DE
 if [ $DE > 0 ];
 then
