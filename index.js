@@ -1,8 +1,11 @@
 const express = require("express")
 const app = express()
+app.use(express.static("assets"))
+app.set("view engine", "ejs")
 
 app.get("/", (req, res) => {
-    res.send("Hello World")
+    // res.send("Hello World")
+  res.render("todo")
 })
 
 app.get("/:name", (req, res) => {
