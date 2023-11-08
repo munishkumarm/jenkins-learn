@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
 })
 
 app.get("/:name", (req, res) => {
-    res.send("Hello World " + req.params.name)
+    res.send("<h1>Test</h1> <br> Hello World " + req.params.name)
 })
 
 app.listen(3500, () => {
